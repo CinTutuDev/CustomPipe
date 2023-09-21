@@ -8,7 +8,10 @@ import localeEs from '@angular/common/locales/es';
 })
 export class TuberiasComponent {
   pi: number = 3.141592;
+  myNumber: number = 122.89654777;
   text: string = 'Holita mundito bonito';
+  sliceArray = ['casa', 'perro', 'papel', 'estuche', 'radio'];
+  sliceArrayNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8];
   price: number = 3.456;
   today: number = Date.now();
 

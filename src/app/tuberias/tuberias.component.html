@@ -1,6 +1,8 @@
 <nav class="navbar bg-body-tertiary">
   <div class="container-fluid justify-content-center h1">
-    <p class="navbar-brand mb-0 text-uppercase text-body-info">Ejemplos prácticos</p>
+    <p class="navbar-brand mb-0 text-uppercase text-body-info">
+      Ejemplos prácticos
+    </p>
   </div>
 </nav>
 
@@ -9,18 +11,51 @@
 <p class="text-center fs-3 text-body-secondary">
   Número PI: {{ pi | number : "1.0-2" }}
 </p>
+<p class="text-center fs-3 text-body-secondary">
+  Mi número: {{ myNumber | number : "3.1-2" }}
+</p>
+<p class="text-center fs-3 text-body-secondary">
+  Mimismo número: {{ myNumber | number : "3.2-2" }}
+</p>
 
 <hr class="border border-warning border-2 opacity-50" />
 <p class="h2 text-center">Slice Pipe</p>
 <p class="text-center fs-3 text-body-secondary">
   Las primeras palabras son: {{ text | slice : 0 : 4 }}
 </p>
+<p class="text-center fs-3 text-body-secondary">
+  Mi array desde la segunda posición: {{ sliceArray | slice : 2 }}
+</p>
+<p class="text-center fs-3 text-body-secondary">
+  Mi array sólo con perro y papel: {{ sliceArray | slice : 1 : 3 }}
+</p>
+<p class="text-center fs-3 text-body-secondary">
+  Mi array los tres últimos: {{ sliceArray | slice : -3 }}
+</p>
+<p class="text-center fs-3 text-body-secondary">
+  Mi array los tres últimos: {{ sliceArray | slice : 2 : -2 }}
+</p>
+<div *ngFor="let item of sliceArrayNumber | slice : 2 : 6" class="text-center">
+  {{ item }}
+</div>
 
 <hr class="border border-primary border-2 opacity-50" />
 <p class="h2 text-center">Currency Pipe & Locale</p>
 <p class="text-center fs-3 text-body-secondary">
   El precio de este producto es:
-  {{ price | currency : "EUR" : "symbol" : "1.0-2":'es' }}
+  {{ price | currency : "EUR" : "symbol" : "1.0-2" : "es" }}
+</p>
+<p class="text-center fs-3 text-body-secondary">
+  El precio de este producto es:
+  {{ price | currency : "JPY" : "symbol" }}
+</p>
+
+<p class="text-center fs-3 text-body-secondary">
+  El precio de este producto es:
+  {{ price | currency : "JPY" : "" }}円
+</p>
+<p class="text-center fs-3 text-body-secondary">
+  El precio de este producto es: {{ price | currency : "USD" : "symbol" }}
 </p>
 
 <hr class="border border-info border-2 opacity-50" />
@@ -28,10 +63,9 @@
 <p class="text-center fs-3 text-body-secondary">
   Hoy es el día: {{ today | date : "medium" }}
 </p>
-
-<hr class="border border-dark border-2 opacity-50" />
-<p class="h2 text-center">Date Pipe</p>
 <p class="text-center fs-3 text-body-secondary">
-  Hoy es el día: {{ today | date : "medium" }}
+  Hoy es el día: {{ today | date : "longDate" }}
 </p>
-
+<p class="text-center fs-3 text-body-secondary">
+  Hoy es el día: {{ today | date : "fullDate" }}
+</p>
