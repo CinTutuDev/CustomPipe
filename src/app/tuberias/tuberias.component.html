@@ -1,30 +1,36 @@
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid justify-content-center h1">
+    <p class="navbar-brand mb-0 text-uppercase text-body-info">Ejemplos prácticos</p>
+  </div>
+</nav>
+
 <hr class="border border-danger border-2 opacity-50" />
-<p class="h1 text-center">Decimal Pipe</p>
+<p class="h2 text-center">Decimal Pipe</p>
 <p class="text-center fs-3 text-body-secondary">
   Número PI: {{ pi | number : "1.0-2" }}
 </p>
 
 <hr class="border border-warning border-2 opacity-50" />
-<p class="h1 text-center">Slice Pipe</p>
+<p class="h2 text-center">Slice Pipe</p>
 <p class="text-center fs-3 text-body-secondary">
   Las primeras palabras son: {{ text | slice : 0 : 4 }}
 </p>
 
 <hr class="border border-primary border-2 opacity-50" />
-<p class="h1 text-center">Currency Pipe & Locale</p>
+<p class="h2 text-center">Currency Pipe & Locale</p>
 <p class="text-center fs-3 text-body-secondary">
   El precio de este producto es:
   {{ price | currency : "EUR" : "symbol" : "1.0-2":'es' }}
 </p>
 
 <hr class="border border-info border-2 opacity-50" />
-<p class="h1 text-center">Date Pipe</p>
+<p class="h2 text-center">Date Pipe</p>
 <p class="text-center fs-3 text-body-secondary">
   Hoy es el día: {{ today | date : "medium" }}
 </p>
 
 <hr class="border border-dark border-2 opacity-50" />
-<p class="h1 text-center">Date Pipe</p>
+<p class="h2 text-center">Date Pipe</p>
 <p class="text-center fs-3 text-body-secondary">
   Hoy es el día: {{ today | date : "medium" }}
 </p>

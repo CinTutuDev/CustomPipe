@@ -1,0 +1,19 @@
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid justify-content-center h1">
+    <p class="navbar-brand mb-0 text-uppercase text-body-info">
+      Creación de una tubería personalizada
+    </p>
+  </div>
+</nav>
+
+<ul class="list-group">
+  <li class="list-group-item fs-3 text-body-secondary fw-semibold">
+    El numero original es: {{ number | numberPrefix }}
+  </li>
+  <li class="list-group-item fs-3 text-body-secondary fw-semibold">
+    El numero en España es: {{ number | numberPrefix: 'SPAIN'}}
+  </li>
+  <li class="list-group-item fs-3 text-body-secondary fw-semibold">
+    El numero en Francia es {{ number | numberPrefix: 'FRANCE' }}
+  </li>
+</ul>
